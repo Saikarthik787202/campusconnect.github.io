@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Unite. Engage. Thrive.</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #F5F5DC;
+            /* Pale Sand */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #333333;
+            /* Charcoal Grey */
+            color: #F5F5DC;
+            /* Pale Sand */
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(to bottom, #F5F5DC, #E5E5EA);
+            /* Pale Sand to Light Grey */
+            color: #333333;
+            /* Charcoal Grey */
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin: 40px 0;
+        }
+
+        .benefit-summary {
+            background-color: #E5E5EA;
+            /* Light Grey */
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #333333;
+            /* Charcoal Grey */
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: #333333;
+            /* Charcoal Grey */
+            color: #F5F5DC;
+            /* Pale Sand */
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .email-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .email-input {
+            flex-grow: 1;
+            padding: 15px;
+            border: 2px solid #F5F5DC;
+            /* Pale Sand */
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            background-color: #E5E5EA;
+            /* Light Grey */
+            color: #333333;
+            /* Charcoal Grey */
+        }
+
+        .submit-button {
+            background-color: #F5F5DC;
+            /* Pale Sand */
+            color: #333333;
+            /* Charcoal Grey */
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #E5E5EA;
+            /* Light Grey */
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+        }
+
+        .benefits h3 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+            color: #333333;
+            /* Charcoal Grey */
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background-color: #E5E5EA;
+            /* Light Grey */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            color: #333333;
+            /* Charcoal Grey */
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #333333;
+            /* Charcoal Grey */
+            color: #F5F5DC;
+            /* Pale Sand */
+            padding: 80px 0;
+        }
+
+        .testimonials h3 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: #444444;
+            /* Dark Grey */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333333;
+            /* Charcoal Grey */
+            color: #F5F5DC;
+            /* Pale Sand */
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: #F5F5DC;
+            /* Pale Sand */
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+            .submit-button {
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CampusConnect</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Unite. Engage. Thrive.</h1>
+            <h2>Bringing campus life together in one seamless platform where students connect, collaborate, and create
+                meaningful college experiences.</h2>
+
+            <img src="https://generated-assets.prod.myninja.ai/d7c58718-2700-4b2d-9daf-ed929ee0c4f7/9ff93734-f9b8-43e5-b44c-f97fe3dd8a0a_0.jpeg"
+                alt="Students connecting on campus using the CampusConnect app" class="hero-image">
+
+            <div class="benefit-summary">
+                <p>CampusConnect bridges the gap between academic life and social experiences, helping students find
+                    their community on campus. Our platform matches you with events, clubs, study groups, and
+                    like-minded peers based on your interests and schedule, eliminating the isolation that many students
+                    face. Whether you're a freshman finding your way or a senior maximizing your final year,
+                    CampusConnect ensures no opportunity for connection passes you by.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h3>Join the Beta Program Today!</h3>
+            <p>Enter your student email to get early access and help shape the future of campus connection.</p><br>
+            <div class="email-form">
+                <input type="email" placeholder="Your student email" class="email-input">
+                <button class="submit-button">SIGN UP NOW</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h3>How CampusConnect Enhances Your College Experience</h3>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>Find Your People</h4>
+                    <p>Discover and connect with students who share your interests, major, or hobbies through our
+                        intelligent matching algorithm.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Never Miss Out</h4>
+                    <p>Get personalized notifications about events, club meetings, and campus activities tailored to
+                        your schedule and preferences.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Study Smarter, Together</h4>
+                    <p>Form or join study groups for your specific courses with students in your classes who share your
+                        learning style.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Campus at Your Fingertips</h4>
+                    <p>Navigate campus resources, dining options, and transportation with real-time updates and peer
+                        recommendations.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Build Your Network</h4>
+                    <p>Create meaningful connections that enhance your college experience and build a professional
+                        network for your future career.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Safe and Inclusive</h4>
+                    <p>Our platform prioritizes student safety and creates spaces where everyone feels welcome and
+                        represented.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h3>What Students Are Saying</h3>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"CampusConnect completely transformed my college experience. As an
+                        international student, I struggled to find my place until I joined the platform. Now I have a
+                        solid group of friends and feel truly part of campus life."</p>
+                    <p class="testimonial-author">— Karthik, International Student</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I was considering transferring after my first semester because I felt
+                        so disconnected. CampusConnect helped me find my people and now I'm even serving as a club
+                        president!"</p>
+                    <p class="testimonial-author">— Rupa, Engineering</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The study group feature saved my GPA! Finding students in my advanced
+                        chemistry class who wanted to study together made all the difference in helping me understand
+                        difficult concepts."</p>
+                    <p class="testimonial-author">— Yashu, Biochemistry</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a commuter student, I always felt like I was missing out on campus
+                        life. CampusConnect bridges that gap and keeps me connected even when I'm not physically on
+                        campus."</p>
+                    <p class="testimonial-author">— Akhila, Communications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 CampusConnect. All rights reserved to Karthik.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+            </div>
+            <p>Contact: support@campusconnect.edu</p>
+        </div>
+    </footer>
+</body>
+
+</html>
